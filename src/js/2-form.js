@@ -26,7 +26,7 @@ document.querySelector(".feedback-form").addEventListener("input", event => {
 window.addEventListener("load", () => {
   const savedData = localStorage.getItem("feedback-form-state");
   
-  if (savedData) {
+    if (savedData) {
     // Якщо є збережені дані, заповнюємо форму та об'єкт formData
     const { email, message } = JSON.parse(savedData);
     formData.email = email;

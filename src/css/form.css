@@ -1,0 +1,64 @@
+/* Общий контейнер */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Заголовок и ссылка */
+.main-title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #4f6ef7;
+  text-decoration: none;
+}
+
+/* Стили формы */
+.feedback-form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: sans-serif;
+}
+
+.feedback-form label {
+  font-size: 16px;
+  color: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  font-size: 16px;
+  resize: none;
+}
+
+.feedback-form button {
+  align-self: flex-start;
+  padding: 12px 32px;
+  background-color: #4f6ef7;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #3d56d6;
+}
