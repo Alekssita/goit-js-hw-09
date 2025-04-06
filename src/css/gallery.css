@@ -1,0 +1,28 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Создаем 3 колонки */
+  gap: 10px; /* Отступы между изображениями */
+  padding: 0;
+  list-style-type: none;
+  width: 100%; /* Ограничиваем ширину контейнера */
+  max-width: 1128px; /* Максимальная ширина для галереи */
+  margin: 0 auto; /* Центрируем галерею */
+}
+
+/* Каждый элемент галереи */
+.gallery-item {
+  width: 100%;
+}
+
+/* Стили для ссылок */
+.gallery-link {
+  display: block;
+  width: 100%;
+}
+
+/* Стили для изображений */
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
