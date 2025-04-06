@@ -1,8 +1,8 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-// Дані зображень
-const images = [
+document.addEventListener('DOMContentLoaded', () => {
+  const images = [
   {
     preview: 'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
     original: 'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820_1280.jpg',
@@ -48,31 +48,31 @@ const images = [
     original: 'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
     description: 'Lighthouse Coast Sea',
   },
-];
+    
+  ];
 
-const gallery = document.querySelector('.gallery');
+  const gallery = document.querySelector('.gallery');
 
-// Генерація розмітки галереї
-const markup = images
-  .map(
-    ({ preview, original, description }) => `
-  <li class="gallery-item">
-    <a class="gallery-link" href="${original}">
-      <img 
-        class="gallery-image" 
-        src="${preview}" 
-        alt="${description}" 
-      />
-    </a>
-  </li>`
-  )
-  .join('');
+  const markup = images
+    .map(
+      ({ preview, original, description }) => `
+    <li class="gallery-item">
+      <a class="gallery-link" href="${original}">
+        <img 
+          class="gallery-image" 
+          src="${preview}" 
+          alt="${description}" 
+        />
+      </a>
+    </li>`
+    )
+    .join('');
 
-gallery.innerHTML = markup;
+  gallery.innerHTML = markup;
 
-// Ініціалізація SimpleLightbox
-const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionPosition: 'bottom',
-  captionDelay: 250,
+  const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
+  });
 });
